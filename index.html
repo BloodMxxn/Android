@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>نمونه PWA</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <h1>به برنامه PWA من خوش آمدید!</h1>
+    <p>این یک نمونه ساده از Progressive Web App است.</p>
+
+    <script src="/assets/app.js"></script>
+    <script>
+      // ثبت Service Worker
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("ServiceWorker ثبت شد با دامنه: ", registration.scope);
+            })
+
+            .catch((err) => {
+              console.log("ثبت ServiceWorker با خطا مواجه شد: ", err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
