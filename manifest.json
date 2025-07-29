@@ -16,7 +16,7 @@
   "features": ["Cross Platform", "low-latency inking", "fast", "useful AI"],
   "icons": [
     {
-      "src": "/icons/icon.png",
+      "src": "/Android/icons/icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
