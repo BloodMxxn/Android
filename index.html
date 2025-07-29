@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" />
     <title>نمونه PWA</title>
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="manifest" href="/Android/manifest.json" />
+    <link rel="stylesheet" href="/Android/styles.css" />
   </head>
   <body>
     <h1>به برنامه PWA من خوش آمدید!</h1>
@@ -17,7 +17,7 @@
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/sw.js")
+            .register("/Android/sw.js")
             .then((registration) => {
               console.log("ServiceWorker ثبت شد با دامنه: ", registration.scope);
             })
